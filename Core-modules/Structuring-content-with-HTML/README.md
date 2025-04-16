@@ -60,3 +60,14 @@
 ### [Creating links](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links)
 
 创建 hyperlink 并设置相关 attribute, 不仅可以 link 到指定 file 也可以 link 到 document fragments. 随后是 email links 的介绍.
+
+### [Images](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images)
+
+如何使用 img 标签, 并介绍:
+
+- 使用 alternative text 的必要性及如何优雅使用
+- 设置 width 和 height 的必要性
+- title 的不合理性
+- 遵守和使用 license 
+- 使用 figure 及 figcaption 为 img 添加 caption
+- 使用 css 嵌入 background image 而不是 img
