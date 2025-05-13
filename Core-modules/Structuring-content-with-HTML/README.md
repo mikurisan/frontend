@@ -71,3 +71,7 @@
 - 遵守和使用 license 
 - 使用 figure 及 figcaption 为 img 添加 caption
 - 使用 css 嵌入 background image 而不是 img
+
+### [Video and audio](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
+
+如何插入 video 和 audio, 以及一些必要的属性, 然后是不同 source format 的 compatibility, 最后是添加不同类型的 video text tracks.
