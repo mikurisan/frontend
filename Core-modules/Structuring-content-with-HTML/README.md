@@ -75,3 +75,7 @@
 ### [Video and audio](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 
 如何插入 video 和 audio, 以及一些必要的属性, 然后是不同 source format 的 compatibility, 最后是添加不同类型的 video text tracks.
+
+### [Table basics](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
+
+如何创建 table, 学习 cell, row 和 head 的概念, 以及如何跨 row 和跨 column.
