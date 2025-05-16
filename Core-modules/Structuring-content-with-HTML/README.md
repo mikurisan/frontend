@@ -75,3 +75,33 @@
 ### [Video and audio](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 
 如何插入 video 和 audio, 以及一些必要的属性, 然后是不同 source format 的 compatibility, 最后是添加不同类型的 video text tracks.
+
+### [Table basics](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
+
+如何创建 table, 学习 cell, row 和 head 的概念, 以及如何跨 row 和跨 column.
+
+### [Table accessibility](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)
+
+从以下方面为 table 增加 accessibility:
+
+- 为 table 添加 caption
+- 使用 tag 将 table 的结构划分为 head, body 和 foot
+- 使用 scope 属性 指明 header 的 scope
+- 使用 id 和 headers 属性更加精准的表示 cell, row, column, header 之间的关系
+
+### [Forms and buttons](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_forms)
+
+简单介绍了 button 和 form 及其构成元素, 如 label 和 input. 然后是一些 control types:
+
+- fieldset 和 legend
+- radio buttons
+- checkboxes
+- drop-down menus
+- multi-line text input fields
+
+最后是 server-side 和 client-side 的 form validation 对比.
+
+
+### [Debugging HTML](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML)
+
+使用 developer tools 查看浏览器如何处理了 bug. 使用 [Markup Validation Service](https://validator.w3.org/) 可以对 HTML 进行验证.
