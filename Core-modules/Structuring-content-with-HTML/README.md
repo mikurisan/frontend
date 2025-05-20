@@ -2,13 +2,20 @@
 
 ### [Basic HTML syntax](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax)
 
-介绍 HTML 的基本 syntax:
-
-- element 的构成
-- attributes
-- document 的结构
-- 特殊的 characters
-- comments
+| Section | Subsection | Description | Note |
+|---|---|---|---|
+| [What is HTML?](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#what_is_html) | | 介绍 HTML 如何使用 tag 结构化 content. | [HTML](https://developer.mozilla.org/en-US/docs/Glossary/HTML) (HyperText Markup Language). tag 名称大小写不敏感. |
+| [Anatomy of an HTML element](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#anatomy_of_an_html_element) | | 图示说明 element 的基本构成. | 包括 opening tag, content 和 closing tag. |
+| | [Nesting elements](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#nesting_elements) | element 可以嵌套使用. | 被包含的 element 要满足开闭规则. |
+| | [Void elements](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#void_elements) | 没有 content 的一类 element, 通常用于 insert/embed 某些东西. | 例如 `<img src="xxx" />` . (最后的 `/` 不一定要添加, 只不过这样会符合 XML 规范)|
+| [Attributes](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#attributes) | | 在 elements 中添加 attributes. | 形式为 `attribute_name="attribute_value"` .|
+| | [Boolean attributes](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#boolean_attributes) | 这类 attributes 直接显示使用而无需声明其 value. | 例如 `<input type="text" disabled />` 中的 `disabled` . |
+| | [Omitting quotes around attribute values](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#omitting_quotes_around_attribute_values) | 介绍如果在 attribute value 中不使用 quotes 是什么后果. | |
+| | [Single or double quotes?](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#single_or_double_quotes) | single 或者 double 都可以. | 在 value 中使用 quotes 时要转义, 比如 `&quote;` 是对 `"` 的转义. |
+| [Anatomy of an HTML document](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#anatomy_of_an_html_document) | | 介绍一个 HTML document 最基本的结构. | 忘记了时常来看看. |
+| | [Whitespace in HTML](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#whitespace_in_html) | 说明 HTML 如何处理 document 中的 whitespace. | 从 JS 中读取 element 的 [innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML) 时会保留所有的 whitespace. |
+| [Character references: including special characters in HTML](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#character_references_including_special_characters_in_html) | | 在 HTML 使用一些特殊的 characters  时要转义. | 详情见 [character references](https://developer.mozilla.org/en-US/docs/Glossary/Character_reference) . |
+| [HTML comments](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#html_comments) | | 如何在 HTML 中写注释. | 形式为 `<!-- xxx -->` . |
 
 ### [What's in head? Webpage metadata](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)
 
