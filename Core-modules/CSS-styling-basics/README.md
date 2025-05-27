@@ -1,5 +1,3 @@
-## Turoials and challenges
-
 ### [What is CSS?](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS)
 
 简单介绍 CSS 是什么, 作用, syntax, 以及其如何应用到 HTML.

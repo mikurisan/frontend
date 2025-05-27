@@ -1,5 +1,3 @@
-## Turoials and challenges
-
 ### [Basic HTML syntax](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax)
 
 | Section | Subsection | Description | Note |
@@ -17,17 +15,19 @@
 | [Character references: including special characters in HTML](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#character_references_including_special_characters_in_html) | | 在 HTML 使用一些特殊的 characters  时要转义. | 详情见 [character references](https://developer.mozilla.org/en-US/docs/Glossary/Character_reference) . |
 | [HTML comments](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#html_comments) | | 如何在 HTML 中写注释. | 形式为 `<!-- xxx -->` . |
 
-### [What's in head? Webpage metadata](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)
+### [Web page metadata](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)
 
-介绍在 head 中如何添加各种 metadata:
-
-- title
-- 指定 document's character encoding
-- author 和 description
-- 其他的 metadata, 例如 Open Graph Data
-- custom icons
-- 应用 CSS 和 JS
-- primary language
+| Section | Subsection | Description | Note |
+|---|---|---|---|
+| [What is the HTML head?](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#what_is_the_html_head) | | 即 [`<head>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/head) 中的内容, 并不会在页面上展示, 用于包含关于该 document 的 [metadata](https://developer.mozilla.org/en-US/docs/Glossary/Metadata) | |
+| [Adding a title](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#adding_a_title) | | 使用 [`<title>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/title) 给 document 添加 title. | 比如在添加 bookmark 时会有用. |
+| [Metada:the `<meta>` element](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#metadata_the_meta_element) | | 使用 [`<meta>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta) 添加 metadata. | 这里仅介绍一些常用的. |
+| | [Specifying your document's character encoding](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#specifying_your_documents_character_encoding) | 使用 `charset` 属性定义 document 的 character encoding. | 一般用 `utf-8` 即可. |
+| | [Adding an author and description](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#adding_an_author_and_description) | 使用 `name` 和 `content` 属性来声明 document 的 author 和 description. | 可能对于 [SEO](https://developer.mozilla.org/en-US/docs/Glossary/SEO) 有用. |
+| | [Other types of metadata](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#other_types_of_metadata) | 其他各种专有的 metadata 以便于创作者获取其所需的信息. | 比如 Facebook 定义的 [Open Graph Data](https://ogp.me/). |
+| [Adding custom icons to your site](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#adding_custom_icons_to_your_site) | | 使用 [`<link>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link) 为网站添加 **favicon**(favorites icon). | 为了兼容目的, 可能需要设置多个 favicon. 如果 favicon 无法 loading 可查阅 [img-src directive](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/img-src). |
+| [Applying CSS and JavaScript to HTML](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#applying_css_and_javascript_to_html) | | 使用 [`<link>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link) 引入 CSS 文件; 使用 [`<script>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script) 引入 JS 脚本. | JS 脚本的 loading 策略可查阅 [Script loading strategies](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#script_loading_strategies). |
+| [Setting the primay language of the document](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#setting_the_primary_language_of_the_document) | | 使用 [`lang`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/lang) 属性注明 document 或 element 所使用的 language. | 这对于 SEO 或 Accessibility 是有用的. 语言代码由 [ISO 639-1](https://www.wikiwand.com/en/articles/ISO_639-1) 定义, 可从中查询. |
 
 ### [Heading and paragraphs](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs)
 
