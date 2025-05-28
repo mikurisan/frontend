@@ -11,7 +11,7 @@
 | | [Internal stylesheets](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Getting_started#internal_stylesheets) | 在 HTML 中写 CSS. | |
 | | [Inline styles](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Getting_started#inline_styles) | 在 element 的属性中写 CSS. | |
 | [Using common selectors](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Getting_started#using_common_selectors) | [Selecting HTML elements](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Getting_started#selecting_html_elements) | CSS 中 element selector (type selector) 的理解. | |
-| | [Adding a class](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Getting_started#adding_a_class) | 为 element 添加 `class` 属性, 随后在 CSS 中定位它. | 使用 `.class_name` 的形式. |
+| | [Adding a class](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Getting_started#adding_a_class) | 为 element 添加 `class` 属性, 随后在 CSS 中定位它. | 使用 `.class_value` 的形式. |
 | | [Styling things based on their location in a document](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Getting_started#styling_things_based_on_their_location_in_a_document) | **descendant combinator**: 定位子 element<br>**next-sibling combinator**: 定位下一个同级 element | 子 element 空格分隔, 同级 element 加号分隔. |
 | | [Styling things based on state](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Getting_started#styling_things_based_on_state) | 基于 element 的 state 进行 render. | 比如 link 的 visited, hover 等, 例如 `a:hover` 的形式. |
 | | [Combining selectors and combinators](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Getting_started#combining_selectors_and_combinators) | 上述几种定位 element 的方式可以结合使用. | 例如 `h1 + p .special` 选择 `h1` 后 `p` 中的所有 `class` 为 `special` 的 elements |
@@ -46,18 +46,18 @@
 
 | Selector | Example | Description |
 |---|---|---|
-| `[attr]` | `a[title]` | 匹配括号中指定的 *attr* 属性. 比如这里匹配包含属性 `title` 的 `a` 元素. |
-| `[attr=value]` | `a[href="https://example.com"]` | 匹配括号中指定的 *attr* 属性, 并且其 value 就是**等于** *value*. 比如这里匹配包含属性 `href`, 并且该属性值为 `https://example.com` 的 `a` 元素. |
-| `[attr~=value]` | `p[class~="special"]` | 匹配括号中指定的 *attr* 属性, 并且其 value **包含** *value*. 比如这里匹配包含属性 `class` 并且其值包含 `special` 的 `p` 元素. |
-| `[attr\|=value]` | `div[lang\|="zh"]` | 匹配括号中指定的 *attr* 属性, 并且其 value 等于 *value* 或以 *value-* 开头. 比如这里匹配包含属性 `lang` 并且其值为 `zh` 的 `div` 元素.  | 
+| `[attr]` | `a[title]` | 匹配括号中指定的 *attr* 属性. 比如这里匹配包含 `<title>` 的 `<a>`. |
+| `[attr=value]` | `a[href="https://example.com"]` | 匹配括号中指定的 *attr* 属性, 并且其 value 就是**等于** *value*. 比如这里匹配包含属性 `href`, 并且该属性值为 `https://example.com` 的 `<a>`. |
+| `[attr~=value]` | `p[class~="special"]` | 匹配括号中指定的 *attr* 属性, 并且其 value **等于** *value* 或 以空格分隔的**包含** *value*  的 list. 比如这里匹配包含属性 `class` 并且其值包含 `special` 的 `<p>`. |
+| `[attr\|=value]` | `div[lang\|="zh"]` | 匹配括号中指定的 *attr* 属性, 并且其 value 等于 *value* 或以 *value-* 开头. 比如这里匹配包含属性 `lang` 并且其值为 `zh` 的 `<div>`.  | 
 
 **Substring matching selectors**
 
 | Selector | Example | Description |
 |---|---|---|
-| `[attr^=value]` | `li[class^="box-"]` | 匹配 value 以 *value* 开头的 *attr* 属性. 比如这里匹配包含属性 `class` 并且其值以 `"box-"` 开头的 `li` 元素. |
-| `[attr$=value]` | `li[class$="-box"]` | 匹配 value 以 *value* 结尾的 *attr* 属性. 比如这里匹配包含属性 `class` 并且其值以 `"-box"` 结尾的 `li` 元素. |
-| `[attr*=value]` | `li[class*="box"]` | 匹配 value 包含 *value* 的 *attr* 属性. 比如这里匹配包含属性值 `class` 并且其值包含 `"box"` 的 `li` 元素. |
+| `[attr^=value]` | `li[class^="box-"]` | 匹配 value 以 *value* 开头的 *attr* 属性. 比如这里匹配包含属性 `class` 并且其值以 `"box-"` 开头的 `<li>`. |
+| `[attr$=value]` | `li[class$="-box"]` | 匹配 value 以 *value* 结尾的 *attr* 属性. 比如这里匹配包含属性 `class` 并且其值以 `"-box"` 结尾的 `<li>`. |
+| `[attr*=value]` | `li[class*="box"]` | 匹配 value 包含 *value* 的 *attr* 属性. 比如这里匹配包含属性值 `class` 并且其值包含 `"box"` 的 `<li>`. |
 
 ### [Peudo-classes and pseudo-elements](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
 
@@ -67,5 +67,16 @@
 | | [Basic pseudo-class example](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements#basic_pseudo-class_example) | 使用 [`:first-child`](https://developer.mozilla.org/en-US/docs/Web/CSS/:first-child) 对 `article` 的第一个 `p` 元素进行选择. | 其他: [`:last-child`](https://developer.mozilla.org/en-US/docs/Web/CSS/:last-child), [`:only-child`](https://developer.mozilla.org/en-US/docs/Web/CSS/:only-child), [`:invalid`](https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid). |
 | | [Use-action pseudo classes](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements#user-action_pseudo_classes) | 也称作 **dynamic pseudo-classes**. 当用户与 element 互动时 apply. | 比如: [`:hover`](https://developer.mozilla.org/en-US/docs/Web/CSS/:hover), [`:focus`](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus). |
 | [What is a pseudo-element?](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements#what_is_a_pseudo-element) | | 使用 `::first-line` 说明 `pseudo-element` 的作用. | 这种 selector 看起来好像你用了 element 一样, 因而是 *pseudo-element*. |
-| [Combining pseudo-classes and pseudo-clements](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements#combining_pseudo-classes_and_pseudo-elements) | | | 例如 `article p:first-child::first-line` |
+| [Combining pseudo-classes and pseudo-clements](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements#combining_pseudo-classes_and_pseudo-elements) | | | 例如 `article p:first-child::first-line`. |
 | [Generating content with ::before and ::after](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements#generating_content_with_before_and_after) | | 一种特殊的 *pseudo-elements*, 配合 [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content) 在 document 中插入 content. | 比如: [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before), [`::after`](https://developer.mozilla.org/en-US/docs/Web/CSS/::after).  因为 accessibility 的原因一般不用于插入问题, 而是插入空 string 用于其他样式目的. |
+
+### [Combinators](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators)
+
+| Section | Subsection | Description | Note |
+|---|---|---|---|
+| [Descendant combinator](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators#descendant_combinator) | | 使用 space ` ` charater 选取所有子孙 element. | 例如 `.box p` 选取属性为 `box` 的 element 下的所有 `<p>`. |
+| [Child combinator](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators#child_combinator) | | 使用 `>` 选取所有子级 element. | 例如 `ul > li` 选取 `<ul>` 的所有子级 `<li>`. |
+| [Next-sibling combinator](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators#next-sibling_combinator) | | 使用 `+` 选取下一个直接紧邻的同级 element. | 例如 `h1 + p` 选取紧接在 `<h1>` 后的同级元素 `<p>`. |
+| [Subequent-sibling combinator](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators#subsequent-sibling_combinator) | | 使用 `~` 选取后面所有的同级 element. | 例如 `h1 ~ p` 选取在 `<h1>` 后所有的同级元素 `<p>`. |
+| [Creating complex selectors with nesting](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators#creating_complex_selectors_with_nesting) | | 使用 [`&`](https://developer.mozilla.org/en-US/docs/Web/CSS/Nesting_selector) 编写多层嵌套的 selector. | 建议直接看示例. |
+| [Combining combinators with selectors](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators#combining_combinators_with_selectors) | | 任意的 selectors 都是可以 combine 的. | 属于是艺高人胆大的部分了. |
